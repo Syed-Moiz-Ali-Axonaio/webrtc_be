@@ -8,7 +8,7 @@ const app = express();
 const server = http.createServer(app);
 const io = socketIo(server, {
   cors: {
-    origin: "https://webrtc-268.pages.dev/", // Your React app's URL
+    origin: "*", // Your React app's URL
     methods: ["GET", "POST"],
     allowedHeaders: ["Content-Type"],
     credentials: true,
@@ -18,7 +18,7 @@ const io = socketIo(server, {
 // Enable CORS for Express
 app.use(
   cors({
-    origin: "https://webrtc-268.pages.dev/",
+    origin: "*",
     methods: ["GET", "POST"],
     allowedHeaders: ["Content-Type"],
     credentials: true,
